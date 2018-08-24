@@ -1,0 +1,14 @@
+{
+  "commands": {
+    "stats": {
+      "_description": "Shows information about the bot",
+      "_usage": ".stats",
+      "statistics": "{0} - Statistics",
+      "uptime": "Uptime",
+      "ping": "Ping",
+      "commands": "Commands",
+      "ram": "Memory",
+      "totalRam": "{0} MB used of {1} MB allocated"
+    }
+  }
+}
