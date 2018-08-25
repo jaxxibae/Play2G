@@ -16,7 +16,7 @@ module.exports = class Play2G extends Client {
     this.strings = []
 
     this.initializeDatabase(MongoDB, { useNewUrlParser: true })
-    // this.initializeApis('src/apis')
+    this.initializeApis('src/apis')
     this.initializeStrings('src/strings')
     this.initializeListeners('src/listeners')
     this.initializeCommands('src/commands')

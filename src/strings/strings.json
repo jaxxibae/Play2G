@@ -2,13 +2,24 @@
   "commands": {
     "stats": {
       "_description": "Shows information about the bot",
-      "_usage": ".stats",
+      "_usage": "-stats",
       "statistics": "{0} - Statistics",
       "uptime": "Uptime",
       "ping": "Ping",
       "commands": "Commands",
       "ram": "Memory",
       "totalRam": "{0} MB used of {1} MB allocated"
+    },
+    "fivem": {
+      "_description": "Shows statistics about a FiveM server",
+      "_usage": "-fivem <server ip>",
+      "invalidIp": "Invalid server IP",
+      "stats": "Stats",
+      "address": "Address",
+      "players": "Players",
+      "onesync": "OneSync Prototype",
+      "scriptHook": "Client scripts allowed",
+      "offline": "Server doesn't exist or is offline"
     }
   }
 }
