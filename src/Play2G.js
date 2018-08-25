@@ -108,7 +108,6 @@ module.exports = class Play2G extends Client {
     })
   }
 
-
   // Database
 
   initializeDatabase (DBWrapper, options = {}) {

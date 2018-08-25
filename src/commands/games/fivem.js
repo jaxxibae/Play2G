@@ -2,7 +2,6 @@ const { Command, Embed } = require('../../structures')
 const { Constants } = require('../../utils')
 
 const fivem = require('fivem-api')
-const request = require('request')
 const rp = require('request-promise-native')
 
 module.exports = class FiveM extends Command {
@@ -53,7 +52,7 @@ class FiveMStatus extends Command {
     const servers = require('../../resources/FiveM/servers.json')
 
     let status = await Promise.all(servers.map(async ({url, name}) => {
-      var response = await rp.head({url, simple: false, resolveWithFullResponse: true, timeout: 5000, time : true}).catch(e => e)
+      var response = await rp.head({ url, simple: false, resolveWithFullResponse: true, timeout: 5000, time: true }).catch(e => e)
       var online = (response.statusCode === 200 || response.statusCode === 404) ? response.elapsedTime : false
       return {url, name, online}
     }))
