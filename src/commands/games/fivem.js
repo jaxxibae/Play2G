@@ -32,7 +32,7 @@ module.exports = class FiveM extends Command {
           ].join('\n'))
           .addBlankField()
           .addField(strings.players, server.players.map(p => p.name).join(', '))
-      }).catch(e => {
+      }).catch(() => {
         embed.setColor(Constants.ERROR_COLOR)
           .setTitle(strings.offline)
       })
@@ -47,7 +47,7 @@ class FiveMStatus extends Command {
     this.name = 'status'
   }
 
-  async run (message, strings) {
+  async run (message) {
     message.channel.startTyping()
     const servers = require('../../resources/FiveM/servers.json')
 

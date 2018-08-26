@@ -26,6 +26,10 @@
       "_usage": "-mcavatar <username>",
       "invalid": "Invalid username",
       "avatar": "{0}'s avatar"
+    },
+    "mcstatus": {
+      "_description": "Shows Minecraft's servers status",
+      "_usage": "-mcstatus"
     }
   }
 }
