@@ -11,8 +11,8 @@
       "totalRam": "{0} MB used of {1} MB allocated"
     },
     "fivem": {
-      "_description": "Shows statistics about a FiveM server",
-      "_usage": "-fivem <server ip>",
+      "_description": "Shows statistics about a FiveM server or about FiveM's servers",
+      "_usage": "-fivem <server ip | status>",
       "invalidIp": "Invalid server IP",
       "stats": "Stats",
       "address": "Address",
@@ -20,6 +20,12 @@
       "onesync": "OneSync Prototype",
       "scriptHook": "Client scripts allowed",
       "offline": "Server doesn't exist or is offline"
+    },
+    "mcavatar": {
+      "_description": "Shows a Minecraft player's avatar",
+      "_usage": "-mcavatar <username>",
+      "invalid": "Invalid username",
+      "avatar": "{0}'s avatar"
     }
   }
 }
