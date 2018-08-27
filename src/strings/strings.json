@@ -27,6 +27,12 @@
       "invalid": "Invalid username",
       "avatar": "{0}'s avatar"
     },
+    "mcbody": {
+      "_description": "Shows a Minecraft player's body",
+      "_usage": "-mcbody <username>",
+      "invalid": "Invalid username",
+      "body": "{0}'s body"
+    },
     "mcstatus": {
       "_description": "Shows Minecraft's servers status",
       "_usage": "-mcstatus"
