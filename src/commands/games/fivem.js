@@ -20,9 +20,9 @@ module.exports = class FiveM extends Command {
         .setTitle(strings.invalidIp)
     } else {
       await fivem.getServerInfo(serverIp).then(async server => {
-        const image = await this.client.apis.imgur.uploadBase64(server.infos.icon)
+        const image = server.infos.icon ? await this.uploadBase64(server.infos.icon) : null
         embed.setTitle(server.infos.vars.sv_hostname)
-          .setThumbnail(image.data.link)
+          .setThumbnail(image)
           .addBlankField()
           .addField(strings.stats, [
             `${strings.address}: **${serverIp}**`,
@@ -31,13 +31,19 @@ module.exports = class FiveM extends Command {
             `${strings.scriptHook}: **${server.infos.vars.sv_scriptHookAllowed}**`
           ].join('\n'))
           .addBlankField()
-          .addField(strings.players, server.players.map(p => p.name).join(', '))
+          .addField(strings.players, server.players.length > 0 ? server.players.map(p => p.name).join(', ') : 'None')
       }).catch(() => {
         embed.setColor(Constants.ERROR_COLOR)
           .setTitle(strings.offline)
       })
     }
     message.channel.send(embed).then(() => message.channel.stopTyping())
+  }
+
+  async uploadBase64 (image) {
+    return await this.client.apis.imgur.uploadBase64(image).then(img => {
+      return img.data.link
+    })
   }
 }
 
