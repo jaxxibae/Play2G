@@ -36,6 +36,10 @@
     "mcstatus": {
       "_description": "Shows Minecraft's servers status",
       "_usage": "-mcstatus"
+    },
+    "mcserver": {
+      "_description": "Shows statistics about a Minecraft server",
+      "_usage": "-mcserver <server ip>"
     }
   }
 }
