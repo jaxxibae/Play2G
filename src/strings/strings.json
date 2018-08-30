@@ -49,6 +49,12 @@
       "_description": "Shows Minecraft's servers status",
       "_usage": "-mcstatus"
     },
+    "ping": {
+      "_description": "Checks if the bot is online",
+      "ping": ":ping_pong: Pong!",
+      "discordPing": "Discord ping: `{0}ms`",
+      "wsPing": "Websocket ping: `{1}ms`"
+    },
     "mcserver": {
       "_description": "Shows statistics about a Minecraft server",
       "_usage": "-mcserver <server ip>"
