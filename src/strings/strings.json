@@ -33,6 +33,18 @@
       "invalid": "Invalid username",
       "body": "{0}'s body"
     },
+    "help": {
+      "_description": "Shows information about commands or lists them",
+      "_usage": "-help [command name]",
+      "listTitle": "Available commands",
+      "prefix": "Prefix",
+      "specificInformation": "Type {0} for command specific information",
+      "aliases": "Aliases",
+      "subcommands": "Subcommands",
+      "noDescription": "No description provided",
+      "noUsage": "No usage provided",
+      "commandNotFound": "I couldn't find a command with that name"
+    },
     "mcstatus": {
       "_description": "Shows Minecraft's servers status",
       "_usage": "-mcstatus"
