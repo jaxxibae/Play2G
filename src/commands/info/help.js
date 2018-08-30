@@ -15,7 +15,6 @@ module.exports = class Help extends Command {
     const prefix = process.env.PREFIX
     const validCommands = this.client.commands.filter(c => !c.hidden)
     const validStrings = this.client.strings['strings'].commands
-    console.log(validStrings)
     let cmd = args[0]
 
     if (cmd) {
