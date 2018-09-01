@@ -37,10 +37,10 @@
       "_description": "Shows information about commands or lists them",
       "_usage": "-help [command name]",
       "listTitle": "Available commands",
-      "prefix": "Prefix",
-      "specificInformation": "Type {0} for command specific information",
       "aliases": "Aliases",
       "subcommands": "Subcommands",
+      "game": ":video_game: Game Commands",
+      "info": ":grey_exclamation: Information Commands",
       "noDescription": "No description provided",
       "noUsage": "No usage provided",
       "commandNotFound": "I couldn't find a command with that name"
@@ -51,8 +51,9 @@
     },
     "ping": {
       "_description": "Checks if the bot is online",
+      "_usage": "-ping",
       "ping": ":ping_pong: Pong!",
-      "discordPing": "Discord ping: `{0}ms`",
+      "discordPing": "Discord API ping: `{0}ms`",
       "wsPing": "Websocket ping: `{1}ms`"
     },
     "mcserver": {

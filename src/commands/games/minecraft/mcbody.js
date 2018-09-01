@@ -6,6 +6,7 @@ module.exports = class MCBody extends Command {
   constructor (client) {
     super(client)
     this.name = 'mcbody'
+    this.category = 'games'
   }
 
   run (message, args, strings) {

@@ -6,6 +6,7 @@ module.exports = class MCAvatar extends Command {
   constructor (client) {
     super(client)
     this.name = 'mcavatar'
+    this.category = 'games'
   }
 
   run (message, args, strings) {

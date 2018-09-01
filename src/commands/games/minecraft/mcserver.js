@@ -6,6 +6,7 @@ module.exports = class MCServer extends Command {
   constructor (client) {
     super(client)
     this.name = 'mcserver'
+    this.category = 'games'
   }
 
   async run (message, args) {

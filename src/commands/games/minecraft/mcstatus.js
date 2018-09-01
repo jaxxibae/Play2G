@@ -5,6 +5,7 @@ module.exports = class MCStatus extends Command {
   constructor (client) {
     super(client)
     this.name = 'mcstatus'
+    this.category = 'games'
   }
 
   async run (message) {

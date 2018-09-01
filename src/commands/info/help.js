@@ -8,6 +8,7 @@ module.exports = class Help extends Command {
     super(client)
     this.name = 'help'
     this.aliases = ['commands', 'ajuda']
+    this.category = 'info'
   }
 
   async run (message, args, strings) {
@@ -42,14 +43,15 @@ module.exports = class Help extends Command {
           .setTitle(strings.commandNotFound)
       }
     } else {
-      const commands = validCommands.map(c => `\`${c.name}\``).sort((a, b) => a.localeCompare(b)).join('**, **')
+      const gameCommands = validCommands.filter(c => c.category === 'games').map(c => `\`${c.name}\``).sort((a, b) => a.localeCompare(b)).join('**, **')
+      const infoCommands = validCommands.filter(c => c.category === 'info').map(c => `\`${c.name}\``).sort((a, b) => a.localeCompare(b)).join('**, **')
       embed.setAuthor(strings.listTitle, this.client.user.displayAvatarURL)
         .setDescription([
-          commands,
-          '',
-          `**${strings.prefix}:** \`${prefix}\``,
-          '',
-          `**${strings.specificInformation.replace('{0}', strings._usage)}**`
+          `**${strings.game}**`,
+          `${gameCommands}`,
+          ``,
+          `**${strings.info}**`,
+          `${infoCommands}`
         ].join('\n'))
     }
     message.channel.send(embed)

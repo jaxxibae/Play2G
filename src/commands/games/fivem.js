@@ -9,6 +9,7 @@ module.exports = class FiveM extends Command {
     super(client)
     this.name = 'fivem'
     this.subcommands = [new FiveMStatus(client, this)]
+    this.category = 'games'
   }
 
   async run (message, args, strings) {

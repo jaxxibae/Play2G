@@ -7,6 +7,7 @@ module.exports = class Stats extends Command {
     super(client)
     this.name = 'stats'
     this.aliases = ['botstats']
+    this.category = 'info'
   }
 
   run (message, args, strings) {

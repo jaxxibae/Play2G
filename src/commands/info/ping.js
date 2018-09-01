@@ -4,6 +4,7 @@ module.exports = class Ping extends Command {
   constructor (client) {
     super(client)
     this.name = 'ping'
+    this.category = 'info'
   }
 
   run (message, args, strings) {
