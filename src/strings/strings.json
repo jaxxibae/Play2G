@@ -3,7 +3,7 @@
     "stats": {
       "_description": "Mostra informações sobre mim! :blush:",
       "_usage": "h!stats",
-      "statistics": "{0} - Estatísticas",
+      "statistics": "{0} - Versão `{1}`",
       "uptime": ":clock: Tempo Online",
       "ping": ":desktop: Ping",
       "commands": ":sparkles: Comandos",
