@@ -9,6 +9,7 @@ module.exports = class Eval extends Command {
     this.name = 'eval'
     this.aliases = ['execute']
     this.hidden = true
+    this.developerOnly = true
   }
 
   canLoad () {
@@ -16,7 +17,6 @@ module.exports = class Eval extends Command {
   }
 
   async run (message, args) {
-    if (message.author.id !== process.env.OWNER_ID) return
     try {
       const evaled = await eval(args.join(' '))
       const cleanEvaled = this.clean(util.inspect(evaled, {depth: 0}))

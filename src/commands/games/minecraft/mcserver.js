@@ -15,29 +15,28 @@ module.exports = class MCServer extends Command {
     message.channel.startTyping()
     if (!args[0] || args[1]) {
       embed.setColor(Constants.ERROR_COLOR)
-        .setTitle('Invalid IP address')
+        .setTitle('Endereço de IP inválido')
     } else {
       const address = args[0].split(':')
       const ip = address[0]
       const port = address[1] || 25565
       await rp({uri: `https://mcapi.xdefcon.com/server/${ip}/full/json?port=${port}`, json: true}).then(async response => {
-        console.log(response)
         if (response.serverStatus === 'online') {
           const icon = response.icon ? await command.uploadBase64(response.icon.replace('data:image/png;base64,', '')) : null
           embed.setAuthor(address.join(':'), icon)
-            .addField('🖥 Server Status', 'Currently online.', true)
-            .addField('🖥 Version', response.version, true)
-            .addField('👥 Members', `${response.players}/${response.maxplayers}`, true)
-            .addField('📝 Message of the Day (MOTD)', response.motd, true)
+            .addField('🖥 Estado do Servidor', 'Online', true)
+            .addField('🎛 Versão', response.version, true)
+            .addField('👥 Jogadores', `${response.players} de ${response.maxplayers}`, true)
+            .addField('📝 Mensagem do Dia (MOTD)', response.motd.text !== ' ' ? response.motd.text : 'Este servidor não possui MOTD', true)
             .setColor(Constants.ONLINE_COLOR)
             .setThumbnail(icon)
         } else {
-          embed.addField('🖥 Server Status', 'Offline.', true)
+          embed.addField('🖥 Estado do Servidor', 'Offline', true)
             .setColor(Constants.ERROR_COLOR)
         }
       }).catch(e => {
         embed.setColor(Constants.ERROR_COLOR)
-          .setTitle(`An error has occurred\n${e}`)
+          .setTitle(`Um erro ocorreu\n${e}`)
       })
     }
     message.channel.send(embed).then(() => message.channel.stopTyping())

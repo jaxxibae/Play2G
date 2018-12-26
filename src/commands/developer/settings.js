@@ -5,6 +5,7 @@ module.exports = class Settings extends Command {
     super(client)
     this.name = 'settings'
     this.hidden = true
+    this.developerOnly = true
   }
 
   canLoad () {
@@ -12,16 +13,12 @@ module.exports = class Settings extends Command {
   }
 
   async run (message, args) {
-    // if (message.author.id !== process.env.OWNER_ID) return
     switch (args[0]) {
-      case 'status': {
-        this.client.user.setPresence({ game: { name: args.slice(2).join(' '), type: args[1] } }).then(() => message.channel.send(':+1:')).catch(err => message.channel.send(':-1:\n' + err))
+      case 'presence': {
+        this.client.user.setPresence({ game: { name: args.slice(2).join(' '), type: args[1] } })
+          .then(() => message.reply(':white_check_mark:'))
+          .catch(err => message.reply(':negative_squared_cross_mark:\n' + err))
       }
     }
-  }
-
-  clean (text) {
-    const blankSpace = String.fromCharCode(8203)
-    return typeof text === 'string' ? text.replace(/`/g, '`' + blankSpace).replace(/@/g, '@' + blankSpace) : text
   }
 }

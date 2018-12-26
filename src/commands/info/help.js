@@ -30,13 +30,13 @@ module.exports = class Help extends Command {
         const description = [
           validStrings[command.name]._description ? validStrings[command.name]._description : strings.noDescription,
           '',
-          validStrings[command.name]._usage ? `\`${validStrings[command.name]._usage}\`` : strings.noUsage
+          `**${strings.howToUse}:**` + (validStrings[command.name]._usage ? `\`${validStrings[command.name]._usage}\`` : strings.noUsage)
         ]
 
-        if (command.aliases.length > 0) description.push(`**${strings.aliases}:** ${command.aliases.map(a => `\`${a}\``).join(', ')}`)
-        if (command.subcommands.length > 0) description.push(`**${strings.subcommands}:** ${command.subcommands.map(a => `\`${a.name}\``).join(', ')}`)
+        if (command.aliases.length > 0) description.push(`**${strings.aliases}:** ${command.aliases.map(a => `\`${prefix}${a}\``).join(', ')}`)
+        if (command.subcommands.length > 0) description.push(`**${strings.subcommands}:** ${command.subcommands.map(a => `\`${prefix}${command.name} ${a.name}\``).join(', ')}`)
 
-        embed.setTitle(command.name)
+        embed.setTitle(prefix + command.name)
           .setDescription(description.join('\n'))
       } else {
         embed.setColor(Constants.ERROR_COLOR)

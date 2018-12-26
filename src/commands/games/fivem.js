@@ -66,6 +66,6 @@ class FiveMStatus extends Command {
 
     const map = status.map(s => s.online ? `+ ${s.name}: Online (${s.online}ms)` : `- ${s.name}: Offline`)
 
-    message.channel.send(`\`\`\`diff\nFiveM Status\n\n${map.join('\n')}\n\nMade with the help of https://github.com/beescuit\`\`\``).then(() => message.channel.stopTyping())
+    message.channel.send(`\`\`\`diff\nEstado do FiveM\n\n${map.join('\n')}\`\`\``).then(() => message.channel.stopTyping())
   }
 }

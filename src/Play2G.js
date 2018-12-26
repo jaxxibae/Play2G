@@ -6,7 +6,7 @@ const { FileUtils } = require('./utils/')
 const fs = require('fs')
 const colors = require('colors')
 
-module.exports = class Play2G extends Client {
+module.exports = class Hinako extends Client {
   constructor (options = {}) {
     super(options)
 
