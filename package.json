@@ -1,6 +1,6 @@
 {
   "name": "play2g",
-  "version": "alpha-1.0.0",
+  "version": "1.0.1",
   "description": "Discord bot made for gamers, by gamers",
   "main": "index.js",
   "scripts": {
