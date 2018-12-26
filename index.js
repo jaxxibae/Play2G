@@ -3,7 +3,7 @@ const clientOptions = {
   enableEveryone: false
 }
 
-require('moment')
+// require('moment')
 require('moment-duration-format')
 
 const { Play2G } = require('./src/')
