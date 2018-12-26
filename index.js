@@ -6,7 +6,7 @@ const clientOptions = {
 require('moment')
 require('moment-duration-format')
 
-const { Play2G } = require('./src/')
-const client = new Play2G(clientOptions)
+const { Hinako } = require('./src/')
+const client = new Hinako(clientOptions)
 
 client.login().then(() => client.log('Connected successfully!', 'Discord')).catch(e => client.logError(e))

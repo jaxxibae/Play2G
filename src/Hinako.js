@@ -1,7 +1,7 @@
 const { Client } = require('discord.js')
 const { Command, EventListener, APIWrapper } = require('./structures')
-const { MongoDB } = require('./database/')
-const { FileUtils } = require('./utils/')
+const { MongoDB } = require('./database')
+const { FileUtils } = require('./utils')
 
 const fs = require('fs')
 const colors = require('colors')
