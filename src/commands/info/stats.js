@@ -13,7 +13,7 @@ module.exports = class Stats extends Command {
   run (message, args, strings) {
     const embed = new Embed(message.author)
     const memory = process.memoryUsage()
-    embed.setTitle(strings.statistics.replace('{0}', this.client.user.username).replace('{1}', require('../../../package.json').version))
+    embed.setTitle(strings.statistics.replace('{0}', this.client.user.username).replace('{1}', process.env.NODE_ENV === 'production' ? `${require('../../../package.json').version}-prod` : `${require('../../../package.json').version}-dev`))
       .setThumbnail(this.client.user.displayAvatarURL)
       .addField(strings.uptime, moment.duration(process.uptime() * 1000).format(strings.format), true)
       .addField(strings.ping, `${Math.floor(this.client.ping)}ms`, true)
