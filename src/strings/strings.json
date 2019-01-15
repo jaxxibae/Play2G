@@ -9,7 +9,7 @@
       "commands": ":sparkles: Comandos",
       "ram": ":control_knobs: Memória",
       "totalRam": "{0} MB usados de {1} MB alocados",
-      "format": "d [d,] h [h,] m [m,] s [s]"
+      "format": "d[d,] h[h,] m[m,] s[s]"
     },
     "fivem": {
       "_description": "Mostra estatísticas sobre um servidor de FiveM ou sobre os servidores do FiveM",
