@@ -1,66 +1,66 @@
 {
-  "commands": {
-    "stats": {
-      "_description": "Mostra informações sobre mim! :blush:",
-      "_usage": "h!stats",
-      "statistics": "{0} - Versão `{1}`",
-      "uptime": ":clock: Tempo Online",
-      "ping": ":desktop: Ping",
-      "commands": ":sparkles: Comandos",
-      "ram": ":control_knobs: Memória",
-      "totalRam": "{0} MB usados de {1} MB alocados",
-      "format": "d[d,] h[h,] m[m,] s[s]"
-    },
-    "fivem": {
-      "_description": "Mostra estatísticas sobre um servidor de FiveM ou sobre os servidores do FiveM",
-      "_usage": "h!fivem <ip do servidor | status>",
-      "invalidIp": "IP do servidor inválido",
-      "stats": "Estatísticas",
-      "address": ":desktop: Endereço IP",
-      "players": ":busts_in_silhouette: Jogadores",
-      "onesync": "Protótipo OneSync",
-      "scriptHook": "Scripts de Cliente Permitidos",
-      "offline": "Servidor não existe ou está offline"
-    },
-    "mcavatar": {
-      "_description": "Mostra o avatar de alguém no Minecraft",
-      "_usage": "h!mcavatar <nome do usuário>",
-      "invalid": "Usuário inválido",
-      "avatar": ":frame_photo: Avatar de {0}"
-    },
-    "mcbody": {
-      "_description": "Mostra o corpo de alguém no Minecraft",
-      "_usage": "h!mcbody <nome do usuário>",
-      "invalid": "Usuário inválido",
-      "body": ":frame_photo: Corpo de {0}"
-    },
-    "help": {
-      "_description": "Mostra informação sobre os meus comandos ou mostra-os",
-      "_usage": "h!help [nome do comando]",
-      "listTitle": "✨ Comandos disponíveis",
-      "howToUse": ":information_desk_person: Como usar",
-      "aliases": ":twisted_rightwards_arrows: Alternativas",
-      "subcommands": ":control_knobs: Subcomandos",
-      "game": ":video_game: Comandos de Jogos",
-      "info": ":grey_exclamation: Comandos de Informação",
-      "noDescription": ":negative_squared_cross_mark: Sem descrição",
-      "noUsage": ":negative_squared_cross_mark: Sem uso",
-      "commandNotFound": "Não consegui encontrar um comando com esse nome"
-    },
-    "mcstatus": {
-      "_description": "Mostra o estado dos servidores do Minecraft",
-      "_usage": "h!mcstatus"
-    },
-    "ping": {
-      "_description": "Veja se eu estou online!",
-      "_usage": "h!ping",
-      "ping": ":ping_pong: Pong!",
-      "discordPing": ":desktop: API: `{0}ms`",
-      "wsPing": ":arrows_counterclockwise: Websocket: `{1}ms`"
-    },
-    "mcserver": {
-      "_description": "Mostra estatísticas sobre um servidor de Minecraft",
-      "_usage": "h!mcserver <ip do servidor>"
-    }
+  "commands":{
+     "stats":{
+        "_description":"Mostra informações sobre mim! :blush:",
+        "_usage":"h!stats",
+        "statistics":"{0} - Versão `{1}`",
+        "uptime":":clock: Tempo Online",
+        "ping":":desktop: Ping",
+        "commands":":sparkles: Comandos",
+        "ram":":control_knobs: Memória",
+        "totalRam":"{0} MB usados de {1} MB alocados",
+        "format":"d[d,] h[h,] m[m,] s[s]"
+     },
+     "fivem":{
+        "_description":"Mostra estatísticas sobre um servidor de FiveM ou sobre os servidores do FiveM",
+        "_usage":"h!fivem <ip do servidor | status>",
+        "invalidIp":"IP do servidor inválido",
+        "stats":"Estatísticas",
+        "address":":desktop: Endereço IP",
+        "players":":busts_in_silhouette: Jogadores",
+        "onesync":"Protótipo OneSync",
+        "scriptHook":"Scripts de Cliente Permitidos",
+        "offline":"Servidor não existe ou está offline"
+     },
+     "mcavatar":{
+        "_description":"Mostra o avatar de alguém no Minecraft",
+        "_usage":"h!mcavatar <nome do usuário>",
+        "invalid":"Usuário inválido",
+        "avatar":":frame_photo: Avatar de {0}"
+     },
+     "mcbody":{
+        "_description":"Mostra o corpo de alguém no Minecraft",
+        "_usage":"h!mcbody <nome do usuário>",
+        "invalid":"Usuário inválido",
+        "body":":frame_photo: Corpo de {0}"
+     },
+     "help":{
+        "_description":"Mostra informação sobre os meus comandos ou mostra-os",
+        "_usage":"h!help [nome do comando]",
+        "listTitle":"✨ Comandos disponíveis",
+        "howToUse":":information_desk_person: Como usar",
+        "aliases":":twisted_rightwards_arrows: Alternativas",
+        "subcommands":":control_knobs: Subcomandos",
+        "game":":video_game: Comandos de Jogos",
+        "info":":grey_exclamation: Comandos de Informação",
+        "noDescription":":negative_squared_cross_mark: Sem descrição",
+        "noUsage":":negative_squared_cross_mark: Sem uso",
+        "commandNotFound":"Não consegui encontrar um comando com esse nome"
+     },
+     "mcstatus":{
+        "_description":"Mostra o estado dos servidores do Minecraft",
+        "_usage":"h!mcstatus"
+     },
+     "ping":{
+        "_description":"Veja se eu estou online!",
+        "_usage":"h!ping",
+        "ping":":ping_pong: Pong!",
+        "discordPing":":desktop: API: `{0}ms`",
+        "wsPing":":arrows_counterclockwise: Websocket: `{1}ms`"
+     },
+     "mcserver":{
+        "_description":"Mostra estatísticas sobre um servidor de Minecraft",
+        "_usage":"h!mcserver <ip do servidor>"
+     }
   }
 }
