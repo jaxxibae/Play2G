@@ -36,7 +36,7 @@ module.exports = class MCServer extends Command {
         }
       }).catch(e => {
         embed.setColor(Constants.ERROR_COLOR)
-          .setTitle(`Um erro ocorreu\n${e}`)
+          .setTitle(`Um erro ocorreu: ${e}`)
       })
     }
     message.channel.send(embed).then(() => message.channel.stopTyping())
