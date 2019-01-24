@@ -1,6 +1,6 @@
 const clientOptions = {
   fetchAllMembers: true,
-  enableEveryone: false
+  enableEveryone: true
 }
 
 require('moment')
