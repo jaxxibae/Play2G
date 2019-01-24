@@ -13,7 +13,7 @@ module.exports = class Bash extends Command {
   run (message, args) {
     exec(args.join(' '), (error, stdout, stderr) => {
       if (error) return message.reply(`:negative_squared_cross_mark: | ${error}`)
-      return message.channel.send(`\`\`\`${stdout || 'null'}\`\`\``)
+      return message.channel.send(`\`\`\`${stdout || null}\`\`\``)
     })
   }
 }
