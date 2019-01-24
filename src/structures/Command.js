@@ -22,7 +22,7 @@ module.exports = class Command {
   }
 
   _run (msg, args, strings, user) {
-    if (this.developerOnly && process.env.OWNER_ID && user.id !== process.env.OWNER_ID) return msg.channel.send(`:no_good: ${user} | Apenas o meu criador pode usar esse comando!`)
+    if (this.developerOnly && process.env.OWNER_ID && user.id !== process.env.OWNER_ID) return msg.channel.send(`:no_good:, ${user} | Apenas o meu criador pode usar esse comando!`)
     if (args.length > 0) {
       let subcommand = this.subcommands.find(c => c.name.toLowerCase() === args[0] || c.aliases.includes(args[0]))
       if (subcommand && subcommand.canRun(msg, args.slice(1))) {
