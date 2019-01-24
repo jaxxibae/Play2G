@@ -1,9 +1,30 @@
 [
-  {"name":"Minecraft.net","url":"https://minecraft.net/"},
-  {"name":"Contas Mojang","url":"https://account.mojang.com/"},
-  {"name":"Serviço de Autenticação","url":"https://authserver.mojang.com/"},
-  {"name":"Serviço de Sessões Multiplayer","url":"https://sessionserver.mojang.com/"},
-  {"name":"Skins Minecraft","url":"https://textures.minecraft.net/"},
-  {"name":"API da Mojang","url":"https://api.mojang.com/"},
-  {"name":"Mojang","url":"https://mojang.com/"}
+  {
+     "name":"Minecraft.net",
+     "url":"https://minecraft.net/"
+  },
+  {
+     "name":"Contas Mojang",
+     "url":"https://account.mojang.com/"
+  },
+  {
+     "name":"Serviço de Autenticação",
+     "url":"https://authserver.mojang.com/"
+  },
+  {
+     "name":"Serviço de Sessões Multiplayer",
+     "url":"https://sessionserver.mojang.com/"
+  },
+  {
+     "name":"Skins Minecraft",
+     "url":"https://textures.minecraft.net/"
+  },
+  {
+     "name":"API da Mojang",
+     "url":"https://api.mojang.com/"
+  },
+  {
+     "name":"Mojang",
+     "url":"https://mojang.com/"
+  }
 ]
