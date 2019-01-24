@@ -58,9 +58,9 @@ class FiveMStatus extends Command {
     message.channel.startTyping()
     const servers = require('../../resources/FiveM/servers.json')
 
-    let status = await Promise.all(servers.map(async ({url, name}) => {
-      var response = await rp.head({ url, simple: false, resolveWithFullResponse: true, timeout: 5000, time: true }).catch(e => e)
-      var online = (response.statusCode === 200 || response.statusCode === 404) ? response.elapsedTime : false
+    const status = await Promise.all(servers.map(async ({url, name}) => {
+      const response = await rp.head({ url, simple: false, resolveWithFullResponse: true, timeout: 5000, time: true }).catch(e => e)
+      const online = (response.statusCode === 200 || response.statusCode === 404) ? response.elapsedTime : false
       return {url, name, online}
     }))
 
