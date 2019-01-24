@@ -17,7 +17,7 @@ module.exports = class ReadyListener extends EventListener {
     setInterval(function () {
       const randomWatchingMessage = watchingMessages[Math.floor(Math.random() * watchingMessages.length)]
       client.user.setPresence({ game: { name: randomWatchingMessage, type: 'WATCHING' } })
-      client.log(`Presença alterada para "Assistindo ${randomWatchingMessage}"`, 'Presence')
+      client.log(`Presença alterada para "Assistindo ${randomWatchingMessage}" com sucesso`, 'Presence')
     }, 60 * 1000)
   }
 }
