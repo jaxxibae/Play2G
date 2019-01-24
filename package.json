@@ -13,6 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/bolsomito/Play2G.git"
   },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6.5.0"
+  },
   "keywords": [
     "discord",
     "discord-bot",
