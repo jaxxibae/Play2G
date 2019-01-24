@@ -1,51 +1,51 @@
 {
-  "name": "hinako",
-  "version": "1.0.2",
-  "description": "Discord bot made for gamers, by gamers",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "start-dev": "nodemon --exec node -r dotenv/config index.js",
-    "test": "standard",
-    "fix": "standard --fix"
+  "name":"hinako",
+  "version":"1.0.2",
+  "description":"Discord bot made for gamers, by gamers",
+  "main":"index.js",
+  "scripts":{
+     "start":"node index.js",
+     "start-dev":"nodemon --exec node -r dotenv/config index.js",
+     "test":"standard",
+     "fix":"standard --fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bolsomito/Play2G.git"
+  "repository":{
+     "type":"git",
+     "url":"git+https://github.com/bolsomito/Play2G.git"
   },
-  "engines": {
-    "node": ">=10",
-    "npm": ">=6.5.0"
+  "engines":{
+     "node":">=10",
+     "npm":">=6.5.0"
   },
-  "keywords": [
-    "discord",
-    "discord-bot",
-    "discord-js",
-    "gaming"
+  "keywords":[
+     "discord",
+     "discord-bot",
+     "discord-js",
+     "gaming"
   ],
-  "author": "Crazy2G",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/bolsomito/Play2G/issues"
+  "author":"Crazy2G",
+  "license":"GPL-3.0",
+  "bugs":{
+     "url":"https://github.com/bolsomito/Play2G/issues"
   },
-  "homepage": "https://github.com/bolsomito/Play2G#readme",
-  "dependencies": {
-    "colors": "^1.3.3",
-    "discord.js": "^11.4.2",
-    "fivem-api": "^1.5.0",
-    "imgur": "^0.3.1",
-    "moment": "^2.23.0",
-    "moment-duration-format": "^2.2.2",
-    "mongoose": "^5.4.0",
-    "mongoose-findorcreate": "^3.0.0",
-    "request": "^2.88.0",
-    "request-promise-native": "^1.0.5",
-    "transform-props": "^1.0.1"
+  "homepage":"https://github.com/bolsomito/Play2G#readme",
+  "dependencies":{
+     "colors":"^1.3.3",
+     "discord.js":"^11.4.2",
+     "fivem-api":"^1.5.0",
+     "imgur":"^0.3.1",
+     "moment":"^2.23.0",
+     "moment-duration-format":"^2.2.2",
+     "mongoose":"^5.4.0",
+     "mongoose-findorcreate":"^3.0.0",
+     "request":"^2.88.0",
+     "request-promise-native":"^1.0.5",
+     "transform-props":"^1.0.1"
   },
-  "devDependencies": {
-    "dotenv": "^6.2.0",
-    "eslint-config-standard": "^11.0.0",
-    "nodemon": "^1.18.9",
-    "standard": "^11.0.1"
+  "devDependencies":{
+     "dotenv":"^6.2.0",
+     "eslint-config-standard":"^11.0.0",
+     "nodemon":"^1.18.9",
+     "standard":"^11.0.1"
   }
 }
