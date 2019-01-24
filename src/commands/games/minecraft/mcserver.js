@@ -43,7 +43,7 @@ module.exports = class MCServer extends Command {
   }
 
   async uploadBase64 (image) {
-    return await this.client.apis.imgur.uploadBase64(image).then(img => {
+    await this.client.apis.imgur.uploadBase64(image).then(img => {
       return img.data.link
     })
   }

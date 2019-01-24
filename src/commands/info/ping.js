@@ -19,5 +19,4 @@ module.exports = class Ping extends Command {
       newMessage.edit(embed)
     })
   }
-
 }

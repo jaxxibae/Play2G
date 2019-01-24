@@ -1,6 +1,6 @@
 const { Command } = require('../../structures/')
 
-const exec = require('child_process').exec;
+const exec = require('child_process').exec
 
 module.exports = class Bash extends Command {
   constructor (client) {
@@ -12,8 +12,8 @@ module.exports = class Bash extends Command {
 
   run (message, args) {
     exec(args.join(' '), (error, stdout, stderr) => {
-      if (error) return message.reply(`:negative_squared_cross_mark: | ${error}`);
-      else return message.channel.send(`\`\`\`${stdout ? stdout : 'null'}\`\`\``);
+      if (error) return message.reply(`:negative_squared_cross_mark: | ${error}`)
+      else return message.channel.send(`\`\`\`${stdout || 'null'}\`\`\``)
     })
   }
 }
