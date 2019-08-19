@@ -8,8 +8,8 @@ module.exports = class FiveM extends Command {
   constructor (client) {
     super(client)
     this.name = 'fivem'
-    this.subcommands = [new FiveMStatus(client, this)]
     this.category = 'games'
+    this.hidden = true
   }
 
   async run (message, args, strings) {
@@ -19,6 +19,7 @@ module.exports = class FiveM extends Command {
     if (!serverIp || args[1]) {
       embed.setColor(Constants.ERROR_COLOR)
         .setTitle(strings.invalidIp)
+        .setDescription(`\`${strings._usage ? strings._usage : null}\``)
     } else {
       await fivem.getServerInfo(serverIp).then(async server => {
         const image = server.infos.icon ? await this.uploadBase64(server.infos.icon) : null
@@ -45,27 +46,5 @@ module.exports = class FiveM extends Command {
     await this.client.apis.imgur.uploadBase64(image).then(img => {
       return img.data.link
     })
-  }
-}
-
-class FiveMStatus extends Command {
-  constructor (client, parentCommand) {
-    super(client, parentCommand)
-    this.name = 'status'
-  }
-
-  async run (message) {
-    message.channel.startTyping()
-    const servers = require('../../resources/FiveM/servers.json')
-
-    const status = await Promise.all(servers.map(async ({url, name}) => {
-      const response = await rp.head({ url, simple: false, resolveWithFullResponse: true, timeout: 5000, time: true }).catch(e => e)
-      const online = (response.statusCode === 200 || response.statusCode === 404) ? response.elapsedTime : false
-      return {url, name, online}
-    }))
-
-    const map = status.map(s => s.online ? `+ ${s.name}: Online (${s.online}ms)` : `- ${s.name}: Offline`)
-
-    message.channel.send(`\`\`\`diff\nEstado do FiveM\n\n${map.join('\n')}\`\`\``).then(() => message.channel.stopTyping())
   }
 }

@@ -30,7 +30,7 @@ module.exports = class Help extends Command {
         const description = [
           validStrings[command.name]._description ? validStrings[command.name]._description : strings.noDescription,
           '',
-          `**${strings.howToUse}:**` + (validStrings[command.name]._usage ? `\`${validStrings[command.name]._usage}\`` : strings.noUsage)
+          `**${strings.howToUse}:** ` + (validStrings[command.name]._usage ? `\`${validStrings[command.name]._usage}\`` : strings.noUsage)
         ]
 
         if (command.aliases.length > 0) description.push(`**${strings.aliases}:** ${command.aliases.map(a => `\`${prefix}${a}\``).join(', ')}`)

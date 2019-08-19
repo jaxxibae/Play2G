@@ -7,22 +7,24 @@ module.exports = class MCServer extends Command {
     super(client)
     this.name = 'mcserver'
     this.category = 'games'
+    this.hidden = true
   }
 
-  async run (message, args) {
+  async run (message, args, strings) {
     const command = this
     const embed = new Embed(message.author)
     message.channel.startTyping()
     if (!args[0] || args[1]) {
       embed.setColor(Constants.ERROR_COLOR)
         .setTitle('Endereço de IP inválido')
+        .setDescription(`\`${strings._usage ? strings._usage : null}\``)
     } else {
       const address = args[0].split(':')
       const ip = address[0]
       const port = address[1] || 25565
       await rp({uri: `https://mcapi.xdefcon.com/server/${ip}/full/json?port=${port}`, json: true}).then(async response => {
         if (response.serverStatus === 'online') {
-          const icon = response.icon ? await command.uploadBase64(response.icon.replace('data:image/png;base64,', '')) : null
+          const icon = response.icon ? await this.uploadBase64(response.icon.replace('data:image/png;base64,', '')) : null
           embed.setAuthor(address.join(':'), icon)
             .addField('🖥 Estado do Servidor', 'Online', true)
             .addField('🎛 Versão', response.version, true)
@@ -44,6 +46,7 @@ module.exports = class MCServer extends Command {
 
   async uploadBase64 (image) {
     await this.client.apis.imgur.uploadBase64(image).then(img => {
+      console.log(img)
       return img.data.link
     })
   }

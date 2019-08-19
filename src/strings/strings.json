@@ -2,7 +2,7 @@
   "commands":{
      "stats":{
         "_description":"Mostra informações sobre mim! :blush:",
-        "_usage":"h!stats",
+        "_usage":"p!stats",
         "statistics":"{0} - Versão `{1}`",
         "uptime":":clock: Tempo Online",
         "ping":":desktop: Ping",
@@ -12,8 +12,8 @@
         "format":"d[d,] h[h,] m[m,] s[s]"
      },
      "fivem":{
-        "_description":"Mostra estatísticas sobre um servidor de FiveM ou sobre os servidores do FiveM",
-        "_usage":"h!fivem <ip do servidor | status>",
+        "_description":"Mostra estatísticas sobre um servidor de FiveM",
+        "_usage":"p!fivem <ip do servidor>",
         "invalidIp":"IP do servidor inválido",
         "stats":"Estatísticas",
         "address":":desktop: Endereço IP",
@@ -24,19 +24,19 @@
      },
      "mcavatar":{
         "_description":"Mostra o avatar de alguém no Minecraft",
-        "_usage":"h!mcavatar <nome do usuário>",
+        "_usage":"p!mcavatar <nome do usuário>",
         "invalid":"Usuário inválido",
         "avatar":":frame_photo: Avatar de {0}"
      },
      "mcbody":{
         "_description":"Mostra o corpo de alguém no Minecraft",
-        "_usage":"h!mcbody <nome do usuário>",
+        "_usage":"p!mcbody <nome do usuário>",
         "invalid":"Usuário inválido",
         "body":":frame_photo: Corpo de {0}"
      },
      "help":{
         "_description":"Mostra informação sobre os meus comandos ou mostra-os",
-        "_usage":"h!help [nome do comando]",
+        "_usage":"p!help [nome do comando]",
         "listTitle":"✨ Comandos disponíveis",
         "howToUse":":information_desk_person: Como usar",
         "aliases":":twisted_rightwards_arrows: Alternativas",
@@ -47,20 +47,16 @@
         "noUsage":":negative_squared_cross_mark: Sem uso",
         "commandNotFound":"Não consegui encontrar um comando com esse nome"
      },
-     "mcstatus":{
-        "_description":"Mostra o estado dos servidores do Minecraft",
-        "_usage":"h!mcstatus"
-     },
      "ping":{
         "_description":"Veja se eu estou online!",
-        "_usage":"h!ping",
+        "_usage":"p!ping",
         "ping":":ping_pong: Pong!",
         "discordPing":":desktop: API: `{0}ms`",
         "wsPing":":arrows_counterclockwise: Websocket: `{1}ms`"
      },
      "mcserver":{
         "_description":"Mostra estatísticas sobre um servidor de Minecraft",
-        "_usage":"h!mcserver <ip do servidor>"
+        "_usage":"p!mcserver <ip do servidor>"
      }
   }
 }

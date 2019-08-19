@@ -10,6 +10,10 @@ module.exports = class Bash extends Command {
     this.developerOnly = true
   }
 
+  canLoad () {
+    return !!process.env.OWNER_ID
+  }
+
   run (message, args) {
     exec(args.join(' '), (error, stdout, stderr) => {
       if (error) return message.reply(`:negative_squared_cross_mark: | ${error}`)

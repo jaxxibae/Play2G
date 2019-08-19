@@ -15,6 +15,7 @@ module.exports = class MCBody extends Command {
     if (!args[0] || args[1]) {
       embed.setTitle(strings.invalid)
         .setColor(Constants.ERROR_COLOR)
+        .setDescription(`\`${strings._usage ? strings._usage : null}\``)
     } else {
       embed.setTitle(strings.body.replace('{0}', args[0]))
         .setImage(API_URL + args[0])
